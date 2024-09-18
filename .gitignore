@@ -1,0 +1,39 @@
+# Ignorar diretórios e arquivos específicos
+
+
+# Extras------------------------
+
+	# Ignorar binários
+
+# Binários e Arquivos Executáveis
+
+
+# Script e Configurações
+*.env
+
+# Documentos e Arquivos de Dados
+*.pdf
+*.db
+*db.sqlite3
+
+# Configurações de IDE e Ferramentas
+*.vscode
+
+# Arquivos de Projeto Específico
+*.zip*
+
+# Diretórios Locais
+.local/
+
+	# Diretórios
+
+# Ignorar diretórios de build
+/build/
+out/
+test.*
+teste.*
+venv/
+
+# Ignorar diretórios de cache
+__pycache__/
+
