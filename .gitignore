@@ -1,5 +1,6 @@
 # Ignorar diretórios e arquivos específicos
-
+static/
+media/
 
 # Extras------------------------
 
