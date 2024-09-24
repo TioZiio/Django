@@ -1,4 +1,179 @@
+:root {
+    --color-white: rgba(255,255,255,0.9);
+    --color-black: rgba(0,0,0);
+    --color-black-shadow: rgba(0,0,0,0.3);
+    --color-main: #00FFFF;
+    --color-main-shadow: rgba(0,255,255,0.4);
+    --background: rgb(0,0,108);
+    --spacing: 1.5rem;
+    --link-dark-color: rgb(0, 83, 134);
+    --link-light-color: rgb(156, 217, 255);
+    --clr-black: rgb(0, 0, 30);
+    --clr-light-gray: rgb(230, 230, 245);
+    --clr-dark-shadow-5: rgba(0, 0, 10, 5%);
+    --clr-dark-shadow-10: rgba(0, 0, 10, 10%);
+    --clr-dark-shadow-20: rgba(0, 0, 10, 20%);
+    --clr-light-shadow-5: rgba(200, 200, 255, 5%);
+    --clr-light-shadow-10: rgba(200, 200, 255, 10%);
+    --clr-light-shadow-20: rgba(200, 200, 255, 20%);
+    --main-page-width: 120rem;
+    --table-min-width: 60rem;
+    --biggest-font-size: 5rem;
+    --bigger-font-size: 4rem;
+    --big-font-size: 3.2rem;
+    --medium-font-size: 3rem;
+    --small-font-size: 1.6rem;
+    --smaller-font-size: 1.4rem;
+    --smallest-font-size: 1.2rem;
+    --transition-fast: 300ms;
+    --transition-medium: 600ms;
+    --transition-slow: 1s;
+    --default-border-radius: 4px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
 
 body {
-    background: rgba(0,0,0,0.4);
+    background: var(--background);
+    background-size: cover;
 }
+
+a {
+    text-decoration: none;
+}
+
+.my-font {
+    font-family: "Open Sans", system-ui;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-variation-settings: "wdth" 97;
+}
+
+/* Configurações do menu  */
+.menu {
+    background: var(--color-black);
+    color: var(--color-main);
+}
+
+.agenda {
+    font-size: 4.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 0.1rem solid var(--color-main-shadow);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.content-search {
+    background: var(--color-black);
+    display: fixed;
+    text-align: center;
+    padding: 1rem;
+}
+
+.content-search label {
+    display: block;
+    font-size: 5rem;
+}
+
+.content-search input {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+}
+
+/* Fim configurações menu  */
+
+/* Configurações lista */
+
+.content {
+  max-width: var(--main-page-width);
+  margin: calc(var(--spacing) * 2) auto;
+  padding: var(--spacing);
+  background: var(--color-white);
+  box-shadow: 2px 2px 5px var(--clr-dark-shadow-20);
+  border-radius: var(--default-border-radius);
+}
+
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.contacts-table {
+  width: 100%;
+  min-width: var(--table-min-width);
+  border-collapse: collapse;
+}
+
+.table-caption {
+  font-size: var(--medium-font-size);
+  font-weight: bold;
+  padding: var(--spacing);
+}
+
+.table-row {
+  text-align: left;
+  text-overflow: ellipsis;
+  transition: background-color var(--transition-fast) ease-in-out;
+}
+
+.table-row:nth-of-type(2n) {
+  background: var(--clr-dark-shadow-5);
+}
+
+.table-row:not(.table-row-header):hover {
+  background: var(--clr-dark-shadow-10);
+}
+
+.table-row-header {
+  background: var(--clr-light-gray);
+  color: var(--clr-black);
+}
+
+.table-cel,
+.table-header {
+    font-size: 1.8rem;
+    padding: var(--spacing);
+}
+
+.table-link {
+  color: var(--link-dark-color);
+  transition: color var(--transition-fast) ease-in-out;
+  text-decoration: none;
+}
+
+.table-link:hover {
+  color: var(--clr-black);
+}
+
+/* Fim do Lista*/
+
+/* Configurações contatos unicos */
+
+.single-contact h1 {
+    font-size: 3rem;
+}
+
+.single-contact p {
+    font-size: 1.8rem;
+}
+

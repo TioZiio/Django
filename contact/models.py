@@ -1,3 +1,5 @@
+import os
+
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -30,6 +32,7 @@ class Contact(models.Model):
         return (f'{self.first_name} {self.last_name}')
 
     def save(self, *args, **kwargs):
+        # Função que converte first_name e last_name em title;
         fields_str = ['first_name','last_name']
 
         for field in fields_str:
@@ -38,4 +41,13 @@ class Contact(models.Model):
                 setattr(self, field, value.title())
 
         super(Contact, self).save(*args, **kwargs)
+    
+    def delete(self, *args, **kwargs):
+        # Apaga a imagem da pasta picture se o usuário for apagado;
+        if self.picture:
+            if os.path.isfile(self.picture.path):
+                os.remove(self.picture.path)
+            else:
+                print('log delete picture')
+        super().delete(*args, **kwargs)
 

@@ -3,6 +3,8 @@ static/
 media/
 project/local_settings.py
 *.ycm_extra_conf.py
+base_static/global/imagens
+base_static/global/style.css
 
 # Extras------------------------
 
