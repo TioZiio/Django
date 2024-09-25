@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for contact in contacts %}
+            {% for contact in page_obj %}
             <tr class="table-row">
                 <td class="table-cel">
                     <a class="table-link" 
@@ -19,25 +19,17 @@
                         {{ contact.id }}
                     </a>
                 </td>
-                    <td class="table-cel">
-                    <a class="table-link" href="#">
-                        {{ contact.first_name }}
-                    </a>
+                <td class="table-cel">
+                    {{ contact.first_name }}
                 </td>
                 <td class="table-cel">
-                    <a class="table-link" href="#">
-                        {{ contact.last_name }}
-                    </a>
+                    {{ contact.last_name }}
                 </td>
                 <td class="table-cel">
-                    <a class="table-link" href="#">
-                        {{ contact.phone }}
-                    </a>
+                    {{ contact.phone }}
                 </td>
                 <td class="table-cel">
-                    <a class="table-link" href="#">
-                        {{ contact.email }}
-                    </a>
+                    {{ contact.email }}
                 </td>
             </tr>
             {% endfor %}

@@ -1,5 +1,9 @@
 {% extends 'global/base.html' %}
 
 {% block content %}
-    {% include './partials/table.html'%}
+    {% if page_obj %}
+        {% include './partials/table.html' %}
+    {% else %}
+        {% include './partials/contact_empty.html' %}
+    {% endif %}
 {% endblock content %}

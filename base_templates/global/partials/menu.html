@@ -1,13 +1,15 @@
 <nav class='menu'>
-    <h1 class='agenda'>Agenda</h1>
+    <h1 class='agenda'>
+        <a href="{% url 'contact:index' %}">AgendA</a>
+    </h1>
     <div class='login'>
-        <h3>Login</h3>
-        <h3>Register</h3>
+        <h3><a href="#">Login</a></h3>
+        <h3><a href="{% url 'contact:create' %}">Register</a></h3>
     </div>
     <div class='content-search'>
-        <form action='/search/' method='get'>
+        <form action="{% url 'contact:search' %}" method='GET'>
             <input class='search-input' type='text' id='search'
-            name='s' placeholder='Search...' value=''>
+                   name='q' placeholder='Search...' value='{{ search_value }}'>
         </form>
     </div>
 </nav>
