@@ -2,10 +2,18 @@
     <h1 class='agenda'>
         <a href="{% url 'contact:index' %}">AgendA</a>
     </h1>
-    <div class='login'>
-        <h3><a href="#">Login</a></h3>
-        <h3><a href="{% url 'contact:create' %}">Register</a></h3>
-    </div>
+    {% if user.is_authenticated %}
+        <div class='login'>
+            <h3><a href="{% url 'contact:create' %}">Create</a></h3>
+            <h3><a href="{% url 'contact:user_update' %}">Update</a></h3>
+            <h3><a href="{% url 'contact:user_logout' %}">logout</a></h3>
+        </div>
+    {% else %}
+        <div class='login'>
+            <h3><a href="{% url 'contact:user_login' %}">Login</a></h3>
+            <h3><a href="{% url 'contact:user_register' %}">Create</a></h3>
+        </div>
+    {% endif %}
     <div class='content-search'>
         <form action="{% url 'contact:search' %}" method='GET'>
             <input class='search-input' type='text' id='search'

@@ -1,0 +1,15 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+<div class="form-wrapper">
+
+    <h2>Update Users</h2>
+
+    <form 
+      action="{{ form_action }}"
+      method="POST"
+    >
+    {% include './partials/_user-form.html' %}    
+
+</div>
+{% endblock content %}

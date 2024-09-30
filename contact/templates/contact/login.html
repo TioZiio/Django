@@ -8,7 +8,7 @@
     {% if user.is_authenticated %}
         <p>
             Login concluido com {{ user.username }}.
-            Clique <a href=" {% url 'contact:logout' %}">aqui</a> para sair.
+            Clique <a href=" {% url 'contact:user_logout' %}">aqui</a> para sair.
         </p>
     {% else %}
         <form 
