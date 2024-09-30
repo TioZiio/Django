@@ -2,9 +2,9 @@
     --color-white: rgba(255,255,255,0.9);
     --color-black: rgba(0,0,0);
     --color-black-shadow: rgba(0,0,0,0.3);
-    --color-main: #00FFFF;
+    --color-main: rgb(0,0,108);
     --color-main-shadow: rgba(0,255,255,0.4);
-    --background: rgb(0,0,108);
+    --color-red: rgba(255,0,0,90%);
     --spacing: 1.5rem;
     --link-dark-color: rgb(0, 83, 134);
     --link-light-color: rgb(156, 217, 255);
@@ -22,6 +22,7 @@
     --bigger-font-size: 4rem;
     --big-font-size: 3.2rem;
     --medium-font-size: 3rem;
+    --medium-letter-size: 2rem;
     --small-font-size: 1.6rem;
     --smaller-font-size: 1.4rem;
     --smallest-font-size: 1.2rem;
@@ -40,7 +41,7 @@ html {
 }
 
 body {
-    background: var(--background);
+    background: var(--color-main);
     background-size: cover;
 }
 
@@ -271,26 +272,27 @@ a {
   padding: var(--spacing);
   text-align: center;
   border-radius: var(--default-border-radius);
-  font-size: var(--smaller-font-size);
+  font-size: var(--medium-letter-size);
 }
 
 .message.success {
-  background: rgba(0, 255, 0, 0.3);
+  background: rgba(0, 255, 0, 0.7);
   border: 1px solid rgba(0, 255, 0, 90%);
 }
 
 .message.error {
-  background: rgba(255, 0, 0, 0.3);
+  background: rgba(255, 0, 0, 0.7);
   border: 1px solid rgba(255, 0, 0, 90%);
 }
 
 .message.warning {
-  background: rgba(255, 255, 0, 0.3);
+  background: rgba(255, 255, 0, 0.7);
   border: 1px solid rgba(255, 255, 0, 90%);
 }
 
 .message.info {
-  background: rgba(0, 0, 255, 0.3);
+  background: var(--color-white);
+  color: var(--color-main);
   border: 1px solid rgba(0, 0, 255, 0.3);
 }
 
