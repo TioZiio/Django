@@ -17,6 +17,7 @@ base_static/global/style.css
 # Script e Configurações
 *.env
 *.swp
+*.pem
 
 # Documentos e Arquivos de Dados
 *.pdf
