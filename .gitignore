@@ -3,6 +3,7 @@ media/
 project/local_settings.py
 *.ycm_extra_conf.py
 *mudanças
+/static/
 
 # Extras------------------------
 
