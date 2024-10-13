@@ -26,8 +26,17 @@ Comandos importantes Servidor:
 
 Comandos importantes Postgre:
 1. sudo -U postgres psql
+> Abre a comandline
+> 1. create role tioziio with login superuser createdb createrole password '123456';
+>> Cria o Super Usuário.
+> 2. create database projeto_agenda with owner tioziio;
+>> Cria a Base de dados
+> 3. grant all privileges on database projeto_agenda to tioziio;
+>> Dá todos os privilégios ao usuário específico;
+2. sudo systemctl restart postgresql
 
-Comandos importantes gerais:
+
+Comandos Gerais:
 1. python3 -c "import string as s;from secrets import SystemRandom as SR;print(''.join(SR().choices(s.ascii_letters + s.digits + s.punctuation, k=64)));"
 
 Ferramentas:
